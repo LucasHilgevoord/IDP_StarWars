@@ -13,13 +13,18 @@ public class WalkerPlayerFollower : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.LookAt(target);
+        
         if (target.position.y < transform.position.y) {
-            transform.rotation = Quaternion.Euler(0, target.position.y, target.position.z);
+            var lookPos = target.position - transform.position;
+            lookPos.y = 0;
+            var rotation = Quaternion.LookRotation(lookPos);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10);
         }
         else
         {
-
+            var lookPos = target.position - transform.position;
+            var rotation = Quaternion.LookRotation(lookPos);
+            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10);
         }
     }
 }
