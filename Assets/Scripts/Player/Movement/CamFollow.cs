@@ -7,7 +7,7 @@ public class CamFollow : MonoBehaviour
 	[SerializeField]Transform target;
 	[SerializeField]Vector3 defDistance = new Vector3 (0f, 2f, 10f);
 	[SerializeField]float targetDistance = 10f;
-//	[SerializeField]float targetRotation = 10f;
+    [SerializeField]float targetRotation = 10f;
 
 	Transform obT;
 
