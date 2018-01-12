@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.5748171, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -325,6 +325,7 @@ GameObject:
   - component: {fileID: 391507412}
   - component: {fileID: 391507414}
   - component: {fileID: 391507413}
+  - component: {fileID: 391507415}
   m_Layer: 0
   m_Name: Walker
   m_TagString: Untagged
@@ -375,6 +376,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   PathResetTime: 3
+--- !u!195 &391507415
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 391507411}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &452499578
 GameObject:
   m_ObjectHideFlags: 0
@@ -455,7 +477,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 452499578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -2.2, z: 0}
   m_LocalScale: {x: 10, y: 1, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1736,7 +1758,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1093133216}
   defDistance: {x: 0, y: 2, z: -10}
-  targetDistance: 10
+  targetDistance: 0.25
+  targetRotation: 5
 --- !u!1 &1941256040
 GameObject:
   m_ObjectHideFlags: 0
