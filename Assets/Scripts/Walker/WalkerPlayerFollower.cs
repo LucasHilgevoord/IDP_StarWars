@@ -5,6 +5,7 @@ using UnityEngine;
 public class WalkerPlayerFollower : MonoBehaviour {
 
     public Transform target;
+    private int range = 30;
 
     // Use this for initialization
     void Start () {
@@ -13,18 +14,27 @@ public class WalkerPlayerFollower : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
-        if (target.position.y < transform.position.y) {
-            var lookPos = target.position - transform.position;
-            lookPos.y = 0;
-            var rotation = Quaternion.LookRotation(lookPos);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10);
+        if (Vector3.Distance(transform.position, target.position) < range)
+        {
+            if (target.position.y < transform.position.y)
+            {
+                var lookPos = target.position - transform.position;
+                lookPos.y = 0;
+                var rotation = Quaternion.LookRotation(lookPos);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10);
+                WalkerMovement.isWalking = false;
+            }
+            else
+            {
+                var lookPos = target.position - transform.position;
+                var rotation = Quaternion.LookRotation(lookPos);
+                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10);
+            }
         }
         else
         {
-            var lookPos = target.position - transform.position;
-            var rotation = Quaternion.LookRotation(lookPos);
-            transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 10);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, Time.deltaTime * 5);
+            WalkerMovement.isWalking = true;
         }
     }
 }
