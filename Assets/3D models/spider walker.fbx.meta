@@ -1,0 +1,185 @@
+fileFormatVersion: 2
+guid: 2e7b5f3142bc25944855165455ffa986
+timeCreated: 1516100334
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: base_spider
+    100002: gun
+    100004: gun_1
+    100006: guns
+    100008: lower_leg
+    100010: pasted__gun
+    100012: pasted__gun_1
+    100014: pasted__lower_leg
+    100016: pasted__lower_leg 1
+    100018: pasted__pasted__lower_leg
+    100020: pasted__pasted__schild
+    100022: pasted__pasted__upper_leg
+    100024: pasted__schild
+    100026: pasted__schild 1
+    100028: pasted__upper_leg
+    100030: pasted__upper_leg1
+    100032: poten
+    100034: schild
+    100036: //RootNode
+    100038: upper_leg
+    100040: upperbody
+    400000: base_spider
+    400002: gun
+    400004: gun_1
+    400006: guns
+    400008: lower_leg
+    400010: pasted__gun
+    400012: pasted__gun_1
+    400014: pasted__lower_leg
+    400016: pasted__lower_leg 1
+    400018: pasted__pasted__lower_leg
+    400020: pasted__pasted__schild
+    400022: pasted__pasted__upper_leg
+    400024: pasted__schild
+    400026: pasted__schild 1
+    400028: pasted__upper_leg
+    400030: pasted__upper_leg1
+    400032: poten
+    400034: schild
+    400036: //RootNode
+    400038: upper_leg
+    400040: upperbody
+    2100000: lambert1
+    2300000: base_spider
+    2300002: gun
+    2300004: gun_1
+    2300006: lower_leg
+    2300008: pasted__gun
+    2300010: pasted__gun_1
+    2300012: pasted__lower_leg
+    2300014: pasted__lower_leg 1
+    2300016: pasted__pasted__lower_leg
+    2300018: pasted__pasted__schild
+    2300020: pasted__pasted__upper_leg
+    2300022: pasted__schild
+    2300024: pasted__schild 1
+    2300026: pasted__upper_leg
+    2300028: pasted__upper_leg1
+    2300030: schild
+    2300032: upper_leg
+    2300034: upperbody
+    3300000: base_spider
+    3300002: gun
+    3300004: gun_1
+    3300006: lower_leg
+    3300008: pasted__gun
+    3300010: pasted__gun_1
+    3300012: pasted__lower_leg
+    3300014: pasted__lower_leg 1
+    3300016: pasted__pasted__lower_leg
+    3300018: pasted__pasted__schild
+    3300020: pasted__pasted__upper_leg
+    3300022: pasted__schild
+    3300024: pasted__schild 1
+    3300026: pasted__upper_leg
+    3300028: pasted__upper_leg1
+    3300030: schild
+    3300032: upper_leg
+    3300034: upperbody
+    4300000: base_spider
+    4300002: pasted__upper_leg
+    4300004: pasted__lower_leg
+    4300006: pasted__schild
+    4300008: pasted__upper_leg1
+    4300010: pasted__lower_leg
+    4300012: pasted__schild
+    4300014: pasted__pasted__upper_leg
+    4300016: pasted__pasted__lower_leg
+    4300018: pasted__pasted__schild
+    4300020: upper_leg
+    4300022: lower_leg
+    4300024: schild
+    4300026: upperbody
+    4300028: gun_1
+    4300030: gun
+    4300032: pasted__gun_1
+    4300034: pasted__gun
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
