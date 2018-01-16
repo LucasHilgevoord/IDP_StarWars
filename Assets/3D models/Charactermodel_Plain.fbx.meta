@@ -1,0 +1,309 @@
+fileFormatVersion: 2
+guid: 1114cce5cc02ce3478e9ce7ac8a79a6a
+timeCreated: 1516028334
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Arm
+    100002: Arm 1
+    100004: Bevestiging_Vleugel_01
+    100006: Bevestiging_Vleugel_02
+    100008: Body
+    100010: //RootNode
+    100012: Cilinder_Rechtopstaand
+    100014: Cilinder_Rechtopstaand 1
+    100016: Cilinder_Scharnier
+    100018: Cilinder_Scharnier 1
+    100020: Cube_Gewricht
+    100022: Cube_Gewricht 1
+    100024: Disk
+    100026: Disk 1
+    100028: Disk1
+    100030: Disk1 1
+    100032: L_Wing
+    100034: L_Wing1
+    100036: pCylinder1
+    100038: Schietgaten
+    100040: Schietgaten 1
+    100042: Shooter1
+    100044: Shooter1 1
+    100046: Shooter2
+    100048: Shooter2 1
+    100050: Shooter3
+    100052: Shooter3 1
+    100054: Shooter4
+    100056: Shooter4 1
+    100058: shot1
+    100060: shot1 1
+    100062: shot2
+    100064: shot2 1
+    100066: shot3
+    100068: shot3 1
+    100070: shot4
+    100072: shot4 1
+    100074: Shoulder
+    100076: Shoulder 1
+    100078: Turret
+    100080: turret
+    100082: Turret 1
+    100084: Turret1
+    100086: turret1
+    100088: Turret1 1
+    100090: Vleugel1
+    100092: Vleugel1 1
+    400000: Arm
+    400002: Arm 1
+    400004: Bevestiging_Vleugel_01
+    400006: Bevestiging_Vleugel_02
+    400008: Body
+    400010: //RootNode
+    400012: Cilinder_Rechtopstaand
+    400014: Cilinder_Rechtopstaand 1
+    400016: Cilinder_Scharnier
+    400018: Cilinder_Scharnier 1
+    400020: Cube_Gewricht
+    400022: Cube_Gewricht 1
+    400024: Disk
+    400026: Disk 1
+    400028: Disk1
+    400030: Disk1 1
+    400032: L_Wing
+    400034: L_Wing1
+    400036: pCylinder1
+    400038: Schietgaten
+    400040: Schietgaten 1
+    400042: Shooter1
+    400044: Shooter1 1
+    400046: Shooter2
+    400048: Shooter2 1
+    400050: Shooter3
+    400052: Shooter3 1
+    400054: Shooter4
+    400056: Shooter4 1
+    400058: shot1
+    400060: shot1 1
+    400062: shot2
+    400064: shot2 1
+    400066: shot3
+    400068: shot3 1
+    400070: shot4
+    400072: shot4 1
+    400074: Shoulder
+    400076: Shoulder 1
+    400078: Turret
+    400080: turret
+    400082: Turret 1
+    400084: Turret1
+    400086: turret1
+    400088: Turret1 1
+    400090: Vleugel1
+    400092: Vleugel1 1
+    2100000: lambert1
+    2300000: Arm
+    2300002: Arm 1
+    2300004: Bevestiging_Vleugel_01
+    2300006: Bevestiging_Vleugel_02
+    2300008: Body
+    2300010: Cilinder_Rechtopstaand
+    2300012: Cilinder_Rechtopstaand 1
+    2300014: Cilinder_Scharnier
+    2300016: Cilinder_Scharnier 1
+    2300018: Cube_Gewricht
+    2300020: Cube_Gewricht 1
+    2300022: Disk
+    2300024: Disk 1
+    2300026: Disk1
+    2300028: Disk1 1
+    2300030: pCylinder1
+    2300032: Schietgaten
+    2300034: Schietgaten 1
+    2300036: Shooter1
+    2300038: Shooter1 1
+    2300040: Shooter2
+    2300042: Shooter2 1
+    2300044: Shooter3
+    2300046: Shooter3 1
+    2300048: Shooter4
+    2300050: Shooter4 1
+    2300052: shot1
+    2300054: shot1 1
+    2300056: shot2
+    2300058: shot2 1
+    2300060: shot3
+    2300062: shot3 1
+    2300064: shot4
+    2300066: shot4 1
+    2300068: Shoulder
+    2300070: Shoulder 1
+    2300072: Turret
+    2300074: Turret 1
+    2300076: Turret1
+    2300078: Turret1 1
+    2300080: Vleugel1
+    2300082: Vleugel1 1
+    3300000: Arm
+    3300002: Arm 1
+    3300004: Bevestiging_Vleugel_01
+    3300006: Bevestiging_Vleugel_02
+    3300008: Body
+    3300010: Cilinder_Rechtopstaand
+    3300012: Cilinder_Rechtopstaand 1
+    3300014: Cilinder_Scharnier
+    3300016: Cilinder_Scharnier 1
+    3300018: Cube_Gewricht
+    3300020: Cube_Gewricht 1
+    3300022: Disk
+    3300024: Disk 1
+    3300026: Disk1
+    3300028: Disk1 1
+    3300030: pCylinder1
+    3300032: Schietgaten
+    3300034: Schietgaten 1
+    3300036: Shooter1
+    3300038: Shooter1 1
+    3300040: Shooter2
+    3300042: Shooter2 1
+    3300044: Shooter3
+    3300046: Shooter3 1
+    3300048: Shooter4
+    3300050: Shooter4 1
+    3300052: shot1
+    3300054: shot1 1
+    3300056: shot2
+    3300058: shot2 1
+    3300060: shot3
+    3300062: shot3 1
+    3300064: shot4
+    3300066: shot4 1
+    3300068: Shoulder
+    3300070: Shoulder 1
+    3300072: Turret
+    3300074: Turret 1
+    3300076: Turret1
+    3300078: Turret1 1
+    3300080: Vleugel1
+    3300082: Vleugel1 1
+    4300000: Body
+    4300002: Shoulder
+    4300004: Cilinder_Rechtopstaand
+    4300006: Cube_Gewricht
+    4300008: Cilinder_Scharnier
+    4300010: Arm
+    4300012: Vleugel1
+    4300014: Bevestiging_Vleugel_01
+    4300016: Bevestiging_Vleugel_02
+    4300018: Disk
+    4300020: Turret
+    4300022: Disk1
+    4300024: Turret1
+    4300026: Schietgaten
+    4300028: Shooter1
+    4300030: shot1
+    4300032: shot2
+    4300034: Shooter2
+    4300036: shot3
+    4300038: Shooter3
+    4300040: shot4
+    4300042: Shooter4
+    4300044: Disk
+    4300046: Turret
+    4300048: Disk1
+    4300050: Turret1
+    4300052: Schietgaten
+    4300054: Shooter1
+    4300056: shot1
+    4300058: shot2
+    4300060: Shooter2
+    4300062: shot3
+    4300064: Shooter3
+    4300066: shot4
+    4300068: Shooter4
+    4300070: Shoulder
+    4300072: Cilinder_Rechtopstaand
+    4300074: Cube_Gewricht
+    4300076: Cilinder_Scharnier
+    4300078: Arm
+    4300080: Vleugel1
+    4300082: pCylinder1
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
