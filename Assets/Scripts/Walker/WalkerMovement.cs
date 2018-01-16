@@ -18,6 +18,7 @@ public class WalkerMovement : MonoBehaviour {
     {
         if (!isWalking)
             StartCoroutine(CountdownNewPath());
+
     }
 
     Vector3 GetRandomPos ()
@@ -25,7 +26,7 @@ public class WalkerMovement : MonoBehaviour {
         float x = Random.Range(-20, 20);
         float z = Random.Range(-20, 20);
 
-        Vector3 pos = new Vector3(x, 1, z);
+        Vector3 pos = new Vector3(x, 3, z);
         return pos;
     }
 
