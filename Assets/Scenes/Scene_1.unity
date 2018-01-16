@@ -1555,10 +1555,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 1093133216}
   body: {fileID: 391507412}
+<<<<<<< HEAD
   bulletPrefab: {fileID: 1285660490444118, guid: dda0b34b5f2ee604a880343a83198704,
     type: 2}
   firePointA: {fileID: 912403821}
   firePointB: {fileID: 1253702449}
+=======
+>>>>>>> 7a761dd0e386f0cbfde3245e301b71ce25f14a65
 --- !u!1 &1745230713
 GameObject:
   m_ObjectHideFlags: 0

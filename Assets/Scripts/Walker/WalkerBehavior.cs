@@ -2,65 +2,44 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalkerBehavior : MonoBehaviour
-{
+public class WalkerBehavior : MonoBehaviour {
 
     public Transform target;
+    private int range = 20;
+    public static bool inRange = false;
     public Transform body;
 
-    private int range = 20;
-    private float fireRate = 3f;
-    private float fireCountdown = 0f;
-
-    public GameObject bulletPrefab;
-    public Transform firePointA;
-    public Transform firePointB;
-
-    // Update is called once per frame
-    void Update()
-    {
-        //Vind Target
-        //-=VERSIMPEL=-
+    // Use this for initialization
+    void Start () {
+		
+	}
+	
+	// Update is called once per frame
+	void Update () {
         if (Vector3.Distance(transform.position, target.position) < range)
         {
             if (target.position.y < transform.position.y)
             {
-                //Als de player lager is dan y0 dan blijft de y0.
                 var lookPos = target.position - transform.position;
                 lookPos.y = 0;
                 var rotation = Quaternion.LookRotation(lookPos);
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 5);
+                inRange = true;
             }
             else
             {
-                //Als de player hoger is dan y0 dan kijkt blijft hij volgen.
                 var lookPos = target.position - transform.position;
                 var rotation = Quaternion.LookRotation(lookPos);
                 transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 5);
             }
-
-            //Schiet wanneer player in range is.
-            if (fireCountdown <= 0f)
-            {
-                ShootA();
-                fireCountdown = 1f / fireRate;
-            }
-
-            fireCountdown -= Time.deltaTime;
         }
         else
         {
-            //Als Player niet in range is dan blijft hij de body volgen.
+            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.identity, Time.deltaTime * 5);
             transform.rotation = Quaternion.Slerp(transform.rotation, body.rotation, Time.deltaTime * 5);
+            inRange = false;
         }
     }
-
-    void ShootA()
-    {
-        Instantiate(bulletPrefab, firePointA.position, firePointA.rotation);
-        Instantiate(bulletPrefab, firePointB.position, firePointB.rotation);
-    }
-
 
     void OnDrawGizmosSelected()
     {
