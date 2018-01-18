@@ -6,30 +6,24 @@ public class CamFollow : MonoBehaviour
 {
 	[SerializeField]Transform target;
 	[SerializeField]Vector3 defDistance = new Vector3 (0f, 2f, 10f);
-	[SerializeField]float targetDistance = 10f;
-    [SerializeField]float targetRotation = 10f;
-
+	[SerializeField]float targetDistance = 15f;
+	[SerializeField]float targetRotation = 15f;
 	Transform obT;
-
-	private Vector3 velocity = Vector3.one;
 
 	void Awake()
 	{
-		obT = transform;
+ 	 obT = transform;
 	}
 
 	void LateUpdate()
 	{
-		SmoothFollow ();
-	}
-
-	void SmoothFollow()
-	{
 		Vector3 toPos = target.position + (target.rotation * defDistance);
-		Vector3 curPos = Vector3.SmoothDamp(obT.position,toPos, ref velocity, targetDistance);
+		Vector3 curPos = Vector3.Lerp (obT.position, toPos, targetDistance * Time.deltaTime);
 		obT.position = curPos;
 
-		obT.LookAt(target, target.up);
+		Quaternion toRot = Quaternion.LookRotation(target.position - obT.position, target.up);
+		Quaternion curRot = Quaternion.Slerp (obT.rotation, toRot, targetRotation * Time.deltaTime);
+		obT.rotation = curRot;
 	}
 
 }
