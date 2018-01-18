@@ -8,22 +8,22 @@ public class CamFollow : MonoBehaviour
 	[SerializeField]Vector3 defDistance = new Vector3 (0f, 2f, 10f);
 	[SerializeField]float targetDistance = 15f;
 	[SerializeField]float targetRotation = 15f;
-	Transform obT;
+	Transform objT;
 
 	void Awake()
 	{
- 	 obT = transform;
+ 	 objT = transform;
 	}
 
 	void LateUpdate()
 	{
 		Vector3 toPos = target.position + (target.rotation * defDistance);
-		Vector3 curPos = Vector3.Lerp (obT.position, toPos, targetDistance * Time.deltaTime);
-		obT.position = curPos;
+		Vector3 curPos = Vector3.Lerp (objT.position, toPos, targetDistance * Time.deltaTime);
+		objT.position = curPos;
 
-		Quaternion toRot = Quaternion.LookRotation(target.position - obT.position, target.up);
-		Quaternion curRot = Quaternion.Slerp (obT.rotation, toRot, targetRotation * Time.deltaTime);
-		obT.rotation = curRot;
+		Quaternion toRot = Quaternion.LookRotation(target.position - objT.position, target.up);
+		Quaternion curRot = Quaternion.Slerp (objT.rotation, toRot, targetRotation * Time.deltaTime);
+		objT.rotation = curRot;
 	}
 
 }
