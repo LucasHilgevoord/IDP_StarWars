@@ -9,6 +9,8 @@ public class WalkerBehavior : MonoBehaviour
     public Transform body;
 
     private int range = 20;
+    public Transform partToRotate;
+
     private float fireRate = 3f;
     private float fireCountdown = 0f;
 
@@ -31,17 +33,17 @@ public class WalkerBehavior : MonoBehaviour
                 var lookPos = target.position - transform.position;
                 lookPos.y = 0;
                 var rotation = Quaternion.LookRotation(lookPos);
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 5);
+                partToRotate.rotation = Quaternion.Slerp(partToRotate.rotation, rotation, Time.deltaTime * 5);
             }
             else
             {
                 //Als de player hoger is dan y0 dan kijkt blijft hij volgen.
                 var lookPos = target.position - transform.position;
                 var rotation = Quaternion.LookRotation(lookPos);
-                transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime * 5);
+                partToRotate.rotation = Quaternion.Slerp(partToRotate.rotation, rotation, Time.deltaTime * 5);
             }
 
-            //Schiet wanneer player in range is.
+            //Schiet wanneer player in range is en de cooldown op is.
             if (fireCountdown <= 0f)
             {
                 ShootA();
@@ -53,16 +55,16 @@ public class WalkerBehavior : MonoBehaviour
         else
         {
             //Als Player niet in range is dan blijft hij de body volgen.
-            transform.rotation = Quaternion.Slerp(transform.rotation, body.rotation, Time.deltaTime * 5);
+            partToRotate.rotation = Quaternion.Slerp(partToRotate.rotation, body.rotation, Time.deltaTime * 5);
         }
     }
 
     void ShootA()
     {
-        Instantiate(bulletPrefab, firePointA.position, firePointA.rotation);
-        Instantiate(bulletPrefab, firePointB.position, firePointB.rotation);
-        Instantiate(bulletPrefab, firePointC.position, firePointC.rotation);
-        Instantiate(bulletPrefab, firePointD.position, firePointD.rotation);
+        //Instantiate(bulletPrefab, firePointA.position, firePointA.rotation);
+        //Instantiate(bulletPrefab, firePointB.position, firePointB.rotation);
+        //Instantiate(bulletPrefab, firePointC.position, firePointC.rotation);
+        //Instantiate(bulletPrefab, firePointD.position, firePointD.rotation);
     }
 
 
