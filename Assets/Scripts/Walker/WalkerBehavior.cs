@@ -4,21 +4,21 @@ using UnityEngine;
 
 public class WalkerBehavior : MonoBehaviour
 {
+    [SerializeField] public Transform target;
+    [SerializeField] public Transform body;
+    [SerializeField] public Transform head;
 
-    public Transform target;
-    public Transform body;
+    [SerializeField] public int range = 20;
+    [SerializeField] public Transform partToRotate;
 
-    private int range = 20;
-    public Transform partToRotate;
-
-    private float fireRate = 3f;
+    [SerializeField] public float fireRate = 3f;
     private float fireCountdown = 0f;
 
-    public GameObject bulletPrefab;
-    public Transform firePointA;
-    public Transform firePointB;
-    public Transform firePointC;
-    public Transform firePointD;
+    [SerializeField] public GameObject bulletPrefab;
+    [SerializeField] public Transform firePointA;
+    [SerializeField] public Transform firePointB;
+    [SerializeField] public Transform firePointC;
+    [SerializeField] public Transform firePointD;
 
     // Update is called once per frame
     void Update()
@@ -46,7 +46,7 @@ public class WalkerBehavior : MonoBehaviour
             //Schiet wanneer player in range is en de cooldown op is.
             if (fireCountdown <= 0f)
             {
-                ShootA();
+                Shoot();
                 fireCountdown = 1f / fireRate;
             }
 
@@ -59,12 +59,12 @@ public class WalkerBehavior : MonoBehaviour
         }
     }
 
-    void ShootA()
+    void Shoot()
     {
-        //Instantiate(bulletPrefab, firePointA.position, firePointA.rotation);
-        //Instantiate(bulletPrefab, firePointB.position, firePointB.rotation);
-        //Instantiate(bulletPrefab, firePointC.position, firePointC.rotation);
-        //Instantiate(bulletPrefab, firePointD.position, firePointD.rotation);
+        Instantiate(bulletPrefab, firePointA.position, head.rotation);
+        Instantiate(bulletPrefab, firePointB.position, head.rotation);
+        //Instantiate(bulletPrefab, firePointC.position, head.rotation);
+        //Instantiate(bulletPrefab, firePointD.position, head.rotation);
     }
 
 

@@ -5,41 +5,41 @@ using UnityEngine.AI;
 
 public class WalkerMovement : MonoBehaviour {
 
-    NavMeshAgent NavM;
-    public float PathResetTime;
-    public static bool isWalking = false;
+    private NavMeshAgent navM;
+    private float pathResetTime;
+    private bool isWalking = false;
 
 	// Use this for initialization
 	void Start () {
-        NavM = GetComponent<NavMeshAgent>();
+        navM = GetComponent<NavMeshAgent>();
 	}
 
     void Update()
     {
         if (!isWalking)
-            StartCoroutine(CountdownNewPath());
+            StartCoroutine(countdownNewPath());
 
     }
 
-    Vector3 GetRandomPos ()
+    Vector3 getRandomPos ()
     {
-        float x = Random.Range(-20, 20);
-        float z = Random.Range(-20, 20);
+        float x = Random.Range(-30, 30);
+        float z = Random.Range(-30, 30);
 
-        Vector3 pos = new Vector3(x, 3, z);
+        Vector3 pos = new Vector3(x, 0, z);
         return pos;
     }
 
-    IEnumerator CountdownNewPath()
+    IEnumerator countdownNewPath()
     {
         isWalking = true;
-        yield return new WaitForSeconds(PathResetTime);
+        yield return new WaitForSeconds(pathResetTime);
         GetNewPath();
         isWalking = false;
     }
 
     void GetNewPath()
     {
-        NavM.SetDestination(GetRandomPos());
+        navM.SetDestination(getRandomPos());
     }
 }
