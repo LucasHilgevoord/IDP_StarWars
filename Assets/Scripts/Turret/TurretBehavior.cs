@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalkerBehavior : MonoBehaviour
+public class TurretBehavior : MonoBehaviour
 {
 
     public Transform target;
