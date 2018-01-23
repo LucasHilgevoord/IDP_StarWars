@@ -5,8 +5,14 @@ using UnityEngine;
 public class PlayerShooting : MonoBehaviour
 {
 	
-	[SerializeField] GameObject Muzzle;
-	[SerializeField] GameObject Bullet;
+	[SerializeField] public GameObject bullet;
+	[SerializeField] public Transform muzzleA;
+	[SerializeField] public Transform muzzleB;
+	[SerializeField] public Transform muzzleC;
+	[SerializeField] public Transform muzzleD;
+
+	private float fireRate = 1;
+	private float fireCountdown = 0f;
 
 	void Start ()
 	{
@@ -17,9 +23,22 @@ public class PlayerShooting : MonoBehaviour
 	{
 		if (Input.GetKeyDown("space"))
 		{
-			Instantiate (Bullet, Muzzle.transform.position, Muzzle.transform.rotation);
-
-			Destroy(Bullet, 3.0f);
+			StartCoroutine(Shoot());
+			fireCountdown = 1f / fireRate;
 		}
+
+		fireCountdown -= Time.deltaTime;
+
 	}
+
+	IEnumerator Shoot()
+	{
+		Debug.Log("Test");
+		Instantiate(bullet, muzzleA.position, muzzleA.rotation);
+		Instantiate(bullet, muzzleC.position, muzzleC.rotation);
+		yield return new WaitForSeconds(1f);
+		Instantiate(bullet, muzzleB.position, muzzleB.rotation);
+		Instantiate(bullet, muzzleD.position, muzzleD.rotation);
+    }
+
 }
