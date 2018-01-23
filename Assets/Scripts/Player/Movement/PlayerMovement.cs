@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour 
 {
-	[SerializeField]float movementSpeed = 20f;
+	[SerializeField]float movementSpeed = 10f;
 	[SerializeField]float turnSpeed = 60f;
 
 	Transform objT;
@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
 	{
 		Turn();
 		Thrust();
+		transform.position += Vector3.forward * Time.deltaTime * movementSpeed ;
 	}
 
 	void Turn()
