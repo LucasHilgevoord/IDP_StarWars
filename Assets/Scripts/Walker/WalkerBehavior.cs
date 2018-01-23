@@ -5,22 +5,29 @@ using UnityEngine;
 public class WalkerBehavior : MonoBehaviour
 {
 
-    public Transform target;
-    public Transform body;
-    public Transform head;
+    [SerializeField] public Transform target;
+    [SerializeField] public Transform body;
+    [SerializeField] public Transform head;
 
     private int range = 20;
     private int rotationSpeed = 10;
     private float fireRate = 3;
     private float fireCountdown = 0f;
 
-    public GameObject bulletPrefab;
-    public Transform firePointA;
-    public Transform firePointB;
-    public Transform firePointC;
-    public Transform firePointD;
+    [SerializeField] public GameObject bulletPrefab;
+    [SerializeField] public Transform firePointA;
+    [SerializeField] public Transform firePointB;
+    [SerializeField] public Transform firePointC;
+    [SerializeField] public Transform firePointD;
 
-    //public shootScript shoot;
+    public AudioClip shootSound;
+    AudioSource audioSource;
+
+
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -63,13 +70,14 @@ public class WalkerBehavior : MonoBehaviour
 
     IEnumerator ShootA()
     {
+        Debug.Log("Test");
         Instantiate(bulletPrefab, firePointA.position, head.rotation);
-        yield return new WaitForSeconds(0.5f);
-        Instantiate(bulletPrefab, firePointB.position, head.rotation);
-        yield return new WaitForSeconds(0.5f);
         Instantiate(bulletPrefab, firePointC.position, head.rotation);
-        yield return new WaitForSeconds(0.5f);
+        audioSource.PlayOneShot(shootSound, 0.7F);
+        yield return new WaitForSeconds(1f);
+        Instantiate(bulletPrefab, firePointB.position, head.rotation);
         Instantiate(bulletPrefab, firePointD.position, head.rotation);
+        
     }
 
 
