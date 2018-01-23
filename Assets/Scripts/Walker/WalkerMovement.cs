@@ -6,8 +6,8 @@ using UnityEngine.AI;
 public class WalkerMovement : MonoBehaviour {
 
     NavMeshAgent NavM;
-    public float PathResetTime;
-    public static bool isWalking = false;
+    [SerializeField] public float PathResetTime;
+    [SerializeField] public static bool isWalking = false;
 
 	// Use this for initialization
 	void Start () {
@@ -26,7 +26,7 @@ public class WalkerMovement : MonoBehaviour {
         float x = Random.Range(-20, 20);
         float z = Random.Range(-20, 20);
 
-        Vector3 pos = new Vector3(x, 3, z);
+        Vector3 pos = new Vector3(x, 0, z);
         return pos;
     }
 

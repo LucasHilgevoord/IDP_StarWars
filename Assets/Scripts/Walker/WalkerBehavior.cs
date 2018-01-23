@@ -9,7 +9,7 @@ public class WalkerBehavior : MonoBehaviour
     [SerializeField] public Transform body;
     [SerializeField] public Transform head;
 
-    private int range = 20;
+    private int range = 30;
     private int rotationSpeed = 10;
     private float fireRate = 3;
     private float fireCountdown = 0f;
