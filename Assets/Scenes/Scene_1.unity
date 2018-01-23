@@ -785,7 +785,7 @@ GameObject:
   - component: {fileID: 526335183}
   m_Layer: 0
   m_Name: spider walker
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3054,7 +3054,7 @@ MonoBehaviour:
   target: {fileID: 1093133216}
   body: {fileID: 704468892}
   head: {fileID: 1407050366}
-  bulletPrefab: {fileID: 1993967012149772, guid: dda0b34b5f2ee604a880343a83198704,
+  bulletPrefab: {fileID: 1993967012149772, guid: f2df031d5aa0a85488521fc6c67f3260,
     type: 2}
   firePointA: {fileID: 1315282856}
   firePointB: {fileID: 485646584}
