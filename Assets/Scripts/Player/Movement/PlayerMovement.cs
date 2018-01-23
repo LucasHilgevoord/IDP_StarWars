@@ -2,15 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour {
+public class PlayerMovement : MonoBehaviour 
+{
 	[SerializeField]float movementSpeed = 20f;
 	[SerializeField]float turnSpeed = 60f;
 
-	Transform obT;
+	Transform objT;
 
 	void Awake()
 	{
-		obT = transform;
+		objT = transform;
 	}
 
 	void Update () 
@@ -25,13 +26,13 @@ public class PlayerMovement : MonoBehaviour {
 		float pitch = turnSpeed * Time.deltaTime * Input.GetAxis ("Pitch");
 		float roll = turnSpeed * Time.deltaTime * Input.GetAxis ("Roll");
 
-		obT.Rotate (pitch, yaw, roll);
+		objT.Rotate (pitch, yaw, roll);
 	}
 
 	void Thrust()
 	{
 		if(Input.GetAxis("Vertical") > 0)
-			obT.position += obT.forward * movementSpeed * Time.deltaTime * Input.GetAxis("Vertical");
+			objT.position += objT.forward * movementSpeed * Time.deltaTime * Input.GetAxis("Vertical");
 	}
 
 }

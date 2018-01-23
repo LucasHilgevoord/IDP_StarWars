@@ -2,32 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WalkerBehavior : MonoBehaviour
+public class TurretBehavior : MonoBehaviour
 {
 
-    [SerializeField] public Transform target;
-    [SerializeField] public Transform body;
-    [SerializeField] public Transform head;
+    public Transform target;
+    public Transform body;
+    public Transform head;
 
     private int range = 20;
     private int rotationSpeed = 10;
     private float fireRate = 3;
     private float fireCountdown = 0f;
 
-    [SerializeField] public GameObject bulletPrefab;
-    [SerializeField] public Transform firePointA;
-    [SerializeField] public Transform firePointB;
-    [SerializeField] public Transform firePointC;
-    [SerializeField] public Transform firePointD;
+    public GameObject bulletPrefab;
+    public Transform firePointA;
+    public Transform firePointB;
+    public Transform firePointC;
+    public Transform firePointD;
 
-    public AudioClip shootSound;
-    AudioSource audioSource;
-
-
-    void Start()
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
+    //public shootScript shoot;
 
     // Update is called once per frame
     void Update()
@@ -70,14 +63,13 @@ public class WalkerBehavior : MonoBehaviour
 
     IEnumerator ShootA()
     {
-        Debug.Log("Test");
         Instantiate(bulletPrefab, firePointA.position, head.rotation);
-        Instantiate(bulletPrefab, firePointC.position, head.rotation);
-        audioSource.PlayOneShot(shootSound, 0.7F);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(bulletPrefab, firePointB.position, head.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(bulletPrefab, firePointC.position, head.rotation);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(bulletPrefab, firePointD.position, head.rotation);
-        
     }
 
 
