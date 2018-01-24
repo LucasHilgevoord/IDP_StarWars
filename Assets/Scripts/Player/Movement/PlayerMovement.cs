@@ -32,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 	void Thrust()
 	{
 		if(Input.GetAxis("Vertical") > 0)
-			objT.position += transform.forward * movementSpeed * Time.deltaTime * Input.GetAxis("Vertical");
+			objT.position += objT.forward * movementSpeed * Time.deltaTime * Input.GetAxis("Vertical");
 	}
 
 }
