@@ -5,14 +5,15 @@ using UnityEngine.AI;
 
 public class WalkerMovement : MonoBehaviour {
 
-    NavMeshAgent NavM;
-    [SerializeField] public float PathResetTime;
-    [SerializeField] public static bool isWalking = false;
+    private NavMeshAgent NavM;
+    private float PathResetTime = 3;
+    private bool isWalking = false;
 
 	// Use this for initialization
 	void Start () {
         NavM = GetComponent<NavMeshAgent>();
-	}
+       // GetRandomPos();
+    }
 
     void Update()
     {
@@ -23,8 +24,9 @@ public class WalkerMovement : MonoBehaviour {
 
     Vector3 GetRandomPos ()
     {
-        float x = Random.Range(-20, 20);
-        float z = Random.Range(-20, 20);
+        //PathResetTime = Random.Range(3, 8);
+        float x = Random.Range(-50, 50);
+        float z = Random.Range(-50, 50);
 
         Vector3 pos = new Vector3(x, 0, z);
         return pos;
