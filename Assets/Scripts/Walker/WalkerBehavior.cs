@@ -5,11 +5,11 @@ using UnityEngine;
 public class WalkerBehavior : MonoBehaviour
 {
 
-    [SerializeField] public Transform target;
+    [SerializeField] public GameObject target;
     [SerializeField] public Transform body;
     [SerializeField] public Transform head;
 
-    private int range = 20;
+    private int range = 30;
     private int rotationSpeed = 10;
     private float fireRate = 3;
     private float fireCountdown = 0f;
@@ -20,55 +20,58 @@ public class WalkerBehavior : MonoBehaviour
     [SerializeField] public Transform firePointC;
     [SerializeField] public Transform firePointD;
 
-    public AudioClip shootSound;
-    AudioSource audioSource;
-
+    [SerializeField] public AudioClip shootSound;
+    private AudioSource audioSource;
 
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+        target = GameObject.Find("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Vind Target
+        //Zoek Target
         //-=VERSIMPEL=-
-        if (Vector3.Distance(transform.position, target.position) < range)
+        if (target != null)
         {
-            if (target.position.y < transform.position.y)
+            if (Vector3.Distance(transform.position, target.transform.position) < range)
             {
-                //Als de player lager is dan y0 dan blijft de y0.
-                var lookPos = target.position - transform.position;
-                lookPos.y = 0;
-                var rotation = Quaternion.LookRotation(lookPos);
-                head.rotation = Quaternion.Slerp(head.rotation, rotation, Time.deltaTime * rotationSpeed);
+                if (target.transform.position.y < transform.position.y)
+                {
+                    //Als de player lager is dan y0 dan blijft de y0.
+                    var lookPos = target.transform.position - transform.position;
+                    lookPos.y = 0;
+                    var rotation = Quaternion.LookRotation(lookPos);
+                    head.rotation = Quaternion.Slerp(head.rotation, rotation, Time.deltaTime * rotationSpeed);
+                }
+                else
+                {
+                    //Als de player hoger is dan y0 dan kijkt blijft hij volgen.
+                    var lookPos = target.transform.position - transform.position;
+                    var rotation = Quaternion.LookRotation(lookPos);
+                    head.rotation = Quaternion.Slerp(head.rotation, rotation, Time.deltaTime * rotationSpeed);
+
+                    //Schiet wanneer player in range is en de cooldown op is.
+                    if (fireCountdown <= 0f)
+                    {
+                        StartCoroutine(Shoot());
+                        fireCountdown = 1f / fireRate;
+                    }
+
+                    fireCountdown -= Time.deltaTime;
+                }
             }
             else
             {
-                //Als de player hoger is dan y0 dan kijkt blijft hij volgen.
-                var lookPos = target.position - transform.position;
-                var rotation = Quaternion.LookRotation(lookPos);
-                head.rotation = Quaternion.Slerp(head.rotation, rotation, Time.deltaTime * rotationSpeed);
-
-                //Schiet wanneer player in range is en de cooldown op is.
-                if (fireCountdown <= 0f)
-                {
-                    StartCoroutine(ShootA());
-                    fireCountdown = 1f / fireRate;
-                }
-
-                fireCountdown -= Time.deltaTime;
+                //Als Player niet in range is dan blijft hij de body volgen.
+                head.rotation = Quaternion.Slerp(head.rotation, body.rotation, Time.deltaTime * rotationSpeed);
             }
-        }
-        else
-        {
-            //Als Player niet in range is dan blijft hij de body volgen.
-            head.rotation = Quaternion.Slerp(head.rotation, body.rotation, Time.deltaTime * rotationSpeed);
         }
     }
 
-    IEnumerator ShootA()
+    IEnumerator Shoot()
     {
         Debug.Log("Test");
         Instantiate(bulletPrefab, firePointA.position, head.rotation);
