@@ -25,9 +25,9 @@ public class WalkerMovement : MonoBehaviour {
     Vector3 GetRandomPos ()
     {
         //PathResetTime = Random.Range(3, 8);
-        float x = Random.Range(-50, 50);
-        float z = Random.Range(-50, 50);
-
+        float x = Random.Range(-600, 600);
+        float z = Random.Range(-600, 600);
+    
         Vector3 pos = new Vector3(x, 0, z);
         return pos;
     }
