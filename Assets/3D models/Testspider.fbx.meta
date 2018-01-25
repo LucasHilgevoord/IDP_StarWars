@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: c325d6dec3a17034e91c2fb2267a09cf
+timeCreated: 1516876320
+licenseType: Free
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: base_spider
+    100002: base_spider_joint
+    100004: guns
+    100006: head_controler
+    100008: head_spider_joint
+    100010: joint11
+    100012: joint12
+    100014: joint2
+    100016: joint3
+    100018: joint5
+    100020: joint6
+    100022: joint8
+    100024: joint9
+    100026: lings_voor_poot_controler
+    100028: links_achter
+    100030: links_achter 1
+    100032: links_achter_controler
+    100034: links_voor
+    100036: links_voor1
+    100038: lower_leg
+    100040: main_controler
+    100042: middel_controler
+    100044: pasted__gun_1
+    100046: pasted__lower_leg
+    100048: pasted__pasted__gun_1
+    100050: pasted__pasted__gun_2
+    100052: pasted__pasted__lower_leg
+    100054: pasted__pasted__pasted__gun_1
+    100056: pasted__pasted__pasted__lower_leg
+    100058: pasted__pasted__pasted__schild
+    100060: pasted__pasted__pasted__upper_leg
+    100062: pasted__pasted__schild
+    100064: pasted__pasted__upper_leg
+    100066: pasted__schild
+    100068: pasted__upper_leg
+    100070: poten
+    100072: rechts_achter
+    100074: rechts_achter 1
+    100076: rechts_achter_controler
+    100078: rechts_voor
+    100080: rechts_voor1
+    100082: rechts_voor_controler
+    100084: schild
+    100086: spider
+    100088: spider1
+    100090: //RootNode
+    100092: transform1
+    100094: transform10
+    100096: transform11
+    100098: transform12
+    100100: transform13
+    100102: transform14
+    100104: transform15
+    100106: transform16
+    100108: transform17
+    100110: transform18
+    100112: transform2
+    100114: transform3
+    100116: transform4
+    100118: transform5
+    100120: transform6
+    100122: transform7
+    100124: transform8
+    100126: transform9
+    100128: upper_leg
+    100130: upperbody
+    400000: base_spider
+    400002: base_spider_joint
+    400004: guns
+    400006: head_controler
+    400008: head_spider_joint
+    400010: joint11
+    400012: joint12
+    400014: joint2
+    400016: joint3
+    400018: joint5
+    400020: joint6
+    400022: joint8
+    400024: joint9
+    400026: lings_voor_poot_controler
+    400028: links_achter
+    400030: links_achter 1
+    400032: links_achter_controler
+    400034: links_voor
+    400036: links_voor1
+    400038: lower_leg
+    400040: main_controler
+    400042: middel_controler
+    400044: pasted__gun_1
+    400046: pasted__lower_leg
+    400048: pasted__pasted__gun_1
+    400050: pasted__pasted__gun_2
+    400052: pasted__pasted__lower_leg
+    400054: pasted__pasted__pasted__gun_1
+    400056: pasted__pasted__pasted__lower_leg
+    400058: pasted__pasted__pasted__schild
+    400060: pasted__pasted__pasted__upper_leg
+    400062: pasted__pasted__schild
+    400064: pasted__pasted__upper_leg
+    400066: pasted__schild
+    400068: pasted__upper_leg
+    400070: poten
+    400072: rechts_achter
+    400074: rechts_achter 1
+    400076: rechts_achter_controler
+    400078: rechts_voor
+    400080: rechts_voor1
+    400082: rechts_voor_controler
+    400084: schild
+    400086: spider
+    400088: spider1
+    400090: //RootNode
+    400092: transform1
+    400094: transform10
+    400096: transform11
+    400098: transform12
+    400100: transform13
+    400102: transform14
+    400104: transform15
+    400106: transform16
+    400108: transform17
+    400110: transform18
+    400112: transform2
+    400114: transform3
+    400116: transform4
+    400118: transform5
+    400120: transform6
+    400122: transform7
+    400124: transform8
+    400126: transform9
+    400128: upper_leg
+    400130: upperbody
+    2100000: unwrapChekcerShader
+    2100002: pasted__pasted__pasted__unwrapChekcerShader
+    2100004: pasted__unwrapChekcerShader
+    2100006: pasted__pasted__unwrapChekcerShader
+    2100008: pasted__unwrapChekcerShader2
+    2100010: pasted__unwrapChekcerShader1
+    2100012: pasted__pasted__unwrapChekcerShader2
+    2300000: spider1
+    3300000: spider1
+    4300000: spider1
+    7400000: Take 001
+    9500000: //RootNode
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

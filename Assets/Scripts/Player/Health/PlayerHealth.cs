@@ -23,7 +23,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (maxHealth <= 0)
         {
-            Destroy(gameObject, 1f);
+            Destroy(gameObject);
         }
     }
 
@@ -34,6 +34,10 @@ public class PlayerHealth : MonoBehaviour
         {
             DestroyObject(other.gameObject);
             maxHealth = (maxHealth - bulletDamage);
+        }
+        else
+        {
+            maxHealth = 0;
         }
     }
 }
