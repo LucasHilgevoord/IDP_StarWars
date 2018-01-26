@@ -4,28 +4,34 @@ using UnityEngine;
 
 public class WalkerHealth : MonoBehaviour {
 
-    public int maxHealth = 20;
-    public int curHealth = 20;
+    [SerializeField] public int maxHealth = 50;
+    [SerializeField] public int bulletDamage = 1;
 
-	// Use this for initialization
-	void Start () {
+
+
+    // Use this for initialization
+    void Start () {
 		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (curHealth == 0)
+		if (maxHealth <= 0)
         {
-            Destroy(gameObject, 2f);
+            Destroy(gameObject);
         }
 	}
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        if (other.gameObject.tag == "playerBullet")
+        if (other.gameObject.tag == "PlayerBullet")
         {
             DestroyObject(other.gameObject);
-            Destroy(gameObject);
+            maxHealth = (maxHealth - bulletDamage);
+        }
+        if (other.gameObject.tag == "Player")
+        {
+            maxHealth = 0;
         }
     }
 }
