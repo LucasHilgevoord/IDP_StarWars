@@ -263,6 +263,7 @@ GameObject:
   - component: {fileID: 65570731801483150}
   - component: {fileID: 65551808789635052}
   - component: {fileID: 65774177952507620}
+  - component: {fileID: 54141842311971074}
   m_Layer: 0
   m_Name: Walker
   m_TagString: Enemy
@@ -1551,6 +1552,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027419532141588}
   m_Mesh: {fileID: 4300026, guid: 2e7b5f3142bc25944855165455ffa986, type: 3}
+--- !u!54 &54141842311971074
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1430274096767240}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!64 &64019071013516986
 MeshCollider:
   m_ObjectHideFlags: 1
@@ -1718,7 +1734,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 455ce9e9a239d044c90957dbcbf30d0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PathResetTime: 3
 --- !u!114 &114516732757912170
 MonoBehaviour:
   m_ObjectHideFlags: 1
