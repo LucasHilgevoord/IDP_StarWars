@@ -5,6 +5,7 @@ using UnityEngine;
 public class Minimap : MonoBehaviour {
 
     private GameObject player;
+    private float storedShadowDistance;
 
 	// Use this for initialization
 	void Start () {
@@ -21,5 +22,17 @@ public class Minimap : MonoBehaviour {
 
             transform.rotation = Quaternion.Euler(90f, player.transform.eulerAngles.y, 0f);
         }
+    }
+
+    void OnPreRender()
+    {
+        storedShadowDistance = QualitySettings.shadowDistance;
+        QualitySettings.shadowDistance = 0;
+    }
+
+
+    void OnPostRender()
+    {
+        QualitySettings.shadowDistance = storedShadowDistance;
     }
 }
