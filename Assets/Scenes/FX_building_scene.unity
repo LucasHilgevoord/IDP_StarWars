@@ -113,11 +113,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!4 &58061774 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4597839896991180, guid: e52bb8992740f9f478e0d87ea5ffb86a,
-    type: 2}
-  m_PrefabInternal: {fileID: 1439801326}
 --- !u!1 &165877757
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,7 +124,6 @@ GameObject:
   - component: {fileID: 165877760}
   - component: {fileID: 165877759}
   - component: {fileID: 165877758}
-  - component: {fileID: 165877762}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -193,28 +187,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 165877757}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 50.1, y: 1, z: -9.3}
+  m_LocalRotation: {x: -0, y: -0.61237234, z: -0, w: 0.79056954}
+  m_LocalPosition: {x: 8.2, y: 1, z: -4.37}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &165877762
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 165877757}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1549bb32e23c46b4b9277d9f177b28f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 58061774}
-  defDistance: {x: 0, y: 3, z: -10}
-  targetDistance: 10
-  targetRotation: 10
+  m_LocalEulerAnglesHint: {x: 0, y: -75.522, z: 0}
 --- !u!1001 &377486444
 Prefab:
   m_ObjectHideFlags: 0
@@ -327,7 +306,7 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e742714c5d9c9e241b58e4a7c7797975, type: 2}
   m_IsPrefabParent: 0
---- !u!1001 &1439801326
+--- !u!1001 &1281363548
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -366,9 +345,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
-    - target: {fileID: 1055344706448794, guid: e52bb8992740f9f478e0d87ea5ffb86a, type: 2}
-      propertyPath: m_Name
-      value: Player
+    - target: {fileID: 198576705177437598, guid: e52bb8992740f9f478e0d87ea5ffb86a,
+        type: 2}
+      propertyPath: randomSeed
+      value: -1230541388
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e52bb8992740f9f478e0d87ea5ffb86a, type: 2}

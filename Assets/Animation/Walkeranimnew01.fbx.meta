@@ -1,6 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Animation/Walkeranimnew01.fbx.meta
 guid: c54a3ae83949b405ab23e8b6e92817ac
 timeCreated: 1516965945
+=======
+guid: 50372b9db6cb25b4a97377dcca3625c9
+timeCreated: 1516966380
+>>>>>>> c2bac898fe0a9226781aa3121b99653232e0f043:Assets/Animation/Walkeranimnew01.fbx.meta
 licenseType: Free
 ModelImporter:
   serializedVersion: 22
