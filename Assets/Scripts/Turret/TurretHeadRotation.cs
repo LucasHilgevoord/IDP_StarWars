@@ -34,32 +34,35 @@ public class TurretHeadRotation : MonoBehaviour
     {
         //Zoek Target
         //-=VERSIMPEL=-
-        if (Vector3.Distance(transform.position, target.transform.position) < range)
+        if (target != null)
         {
-            //Head Rotation
-            var headLookPos = target.transform.position - transform.position;
-            headLookPos.y = 0;
-            var headRotate = Quaternion.LookRotation(headLookPos);
-            head.rotation = Quaternion.Slerp(head.rotation, headRotate, Time.deltaTime * rotationSpeed);
-
-            //Gun Rotation
-            var gunLookPos = target.transform.position - transform.position;
-            var gunRotate = Quaternion.LookRotation(gunLookPos);
-            gun.rotation = Quaternion.Slerp(gun.rotation, gunRotate, Time.deltaTime * 2);
-
-            //Shoot
-            if (fireCountdown <= 0f)
+            if (Vector3.Distance(transform.position, target.transform.position) < range)
             {
-                StartCoroutine(Shoot());
-                fireCountdown = 1f / fireRate;
-            }
+                //Head Rotation
+                var headLookPos = target.transform.position - transform.position;
+                headLookPos.y = 0;
+                var headRotate = Quaternion.LookRotation(headLookPos);
+                head.rotation = Quaternion.Slerp(head.rotation, headRotate, Time.deltaTime * rotationSpeed);
 
-            fireCountdown -= Time.deltaTime;
-        }
-        else
-        {
-            //Als Player niet in range is dan blijft hij de body volgen.
-            head.rotation = Quaternion.Slerp(head.rotation, body.rotation, Time.deltaTime * rotationSpeed);
+                //Gun Rotation
+                var gunLookPos = target.transform.position - transform.position;
+                var gunRotate = Quaternion.LookRotation(gunLookPos);
+                gun.rotation = Quaternion.Slerp(gun.rotation, gunRotate, Time.deltaTime * 2);
+
+                //Shoot
+                if (fireCountdown <= 0f)
+                {
+                    StartCoroutine(Shoot());
+                    fireCountdown = 1f / fireRate;
+                }
+
+                fireCountdown -= Time.deltaTime;
+            }
+            else
+            {
+                //Als Player niet in range is dan blijft hij de body volgen.
+                head.rotation = Quaternion.Slerp(head.rotation, body.rotation, Time.deltaTime * rotationSpeed);
+            }
         }
     }
 

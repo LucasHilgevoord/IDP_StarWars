@@ -18,17 +18,20 @@ public class WalkerHealth : MonoBehaviour {
 	void Update () {
 		if (maxHealth <= 0)
         {
-            Destroy(gameObject, 1f);
+            Destroy(gameObject);
         }
 	}
 
     void OnCollisionEnter(Collision other)
     {
-        Debug.Log(other.gameObject.tag);
         if (other.gameObject.tag == "PlayerBullet")
         {
             DestroyObject(other.gameObject);
             maxHealth = (maxHealth - bulletDamage);
+        }
+        if (other.gameObject.tag == "Player")
+        {
+            maxHealth = 0;
         }
     }
 }
