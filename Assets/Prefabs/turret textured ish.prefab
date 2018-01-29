@@ -317,7 +317,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4311470366357244}
-  - component: {fileID: 95071743171575208}
   m_Layer: 0
   m_Name: turret textured ish
   m_TagString: Untagged
@@ -442,7 +441,7 @@ Transform:
   m_GameObject: {fileID: 1856812153788706}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.165, y: 3.7854, z: 21.886}
-  m_LocalScale: {x: 31.77415, y: 31.77414, z: 31.77414}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4354971327126808}
   - {fileID: 4485643751667264}
@@ -1193,20 +1192,3 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1439760886933116}
   m_Mesh: {fileID: 4300000, guid: c048358ec2fb73441aaa30b941f17ea2, type: 3}
---- !u!95 &95071743171575208
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1856812153788706}
-  m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: c048358ec2fb73441aaa30b941f17ea2, type: 3}
-  m_Controller: {fileID: 0}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1

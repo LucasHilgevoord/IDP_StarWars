@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4198754191521710}
   - component: {fileID: 114643871392609930}
+  - component: {fileID: 114392959630980026}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -5306,6 +5307,19 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114392959630980026
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1055344706448794}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f5207688810b8d498d3daa5e363e527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 50
+  bulletDamage: 1
 --- !u!114 &114643871392609930
 MonoBehaviour:
   m_ObjectHideFlags: 1
