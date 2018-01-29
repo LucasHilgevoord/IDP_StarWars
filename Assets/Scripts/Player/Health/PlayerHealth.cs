@@ -2,42 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealth : MonoBehaviour 
 {
+    [SerializeField] private Stat health;
 
-    [SerializeField]
-    public int maxHealth = 50;
-    [SerializeField]
-    public int bulletDamage = 1;
+	private void Awake ()
+	{
+		health.Initialize ();
+	}
 
-
-
-    // Use this for initialization
-    void Start()
+    void Update ()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (maxHealth <= 0)
+        if (health.CurrentVal <= 0)
         {
             Destroy(gameObject);
         }
     }
 
-    void OnCollisionEnter(Collision other)
-    {
-        Debug.Log(other.gameObject.tag);
-        if (other.gameObject.tag == "EnemyBullet")
+	void OnCollisionEnter (Collision col)
+	{
+		if(col.gameObject.tag == "EnemyBullet")
+		{
+			health.CurrentVal -= 50 * Time.deltaTime;
+		}
+
+        if (col.gameObject.tag != "EnemyBullet")
         {
-            DestroyObject(other.gameObject);
-            maxHealth = (maxHealth - bulletDamage);
-        }
-        else
-        {
-            maxHealth = 0;
+            health.CurrentVal = 0;
         }
     }
 }
+
