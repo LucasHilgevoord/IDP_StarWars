@@ -19,15 +19,4 @@ public class PlayerHealth : MonoBehaviour
 		}
 	}
 }
-//	void Update () 
-//	{
-//		if (Input.GetKeyDown (KeyCode.P)) 
-//		{
-//			health.CurrentVal -= 10;
-//		}
-//		if (Input.GetKeyDown (KeyCode.L)) 
-//		{
-//			health.CurrentVal += 10;
-//		}
-//	}
 
