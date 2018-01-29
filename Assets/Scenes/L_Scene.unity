@@ -1431,7 +1431,8 @@ Prefab:
       propertyPath: health.bar
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114707311684321014, guid: 3968f9fe3e3d99541ba1512f93170d97, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3968f9fe3e3d99541ba1512f93170d97, type: 2}
   m_IsPrefabParent: 0
 --- !u!1 &1065683056
