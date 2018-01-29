@@ -32,3 +32,7 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Assets/Standard Assets.meta
+Assets/Animation/Walkeranimnew01.fbx.meta
+Assets/Standard Assets.meta
+*.meta
