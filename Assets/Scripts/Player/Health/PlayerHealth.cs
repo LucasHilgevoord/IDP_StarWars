@@ -11,9 +11,17 @@ public class PlayerHealth : MonoBehaviour
 		health.Initialize ();
 	}
 
+	void Update()
+	{
+		if (health.CurrentVal == 0) 
+		{
+			Destroy (gameObject);
+		}
+	}
+
 	void OnCollisionEnter (Collision col)
 	{
-		if(col.gameObject.tag == "EnemyBullet")
+		if(col.gameObject.tag == "PlayerBullet")
 		{
 			health.CurrentVal -= 50 * Time.deltaTime;
 		}

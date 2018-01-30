@@ -5,7 +5,7 @@ using UnityEngine;
 public class WalkerHealth : MonoBehaviour {
 
     [SerializeField] public int maxHealth = 50;
-    [SerializeField] public int bulletDamage = 1;
+    [SerializeField] public int bulletDamage = 50;
 
 
 
