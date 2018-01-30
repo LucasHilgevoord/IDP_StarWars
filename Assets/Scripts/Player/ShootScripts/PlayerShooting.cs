@@ -26,9 +26,7 @@ public class PlayerShooting : MonoBehaviour
 			StartCoroutine(Shoot());
 			fireCountdown = 1f / fireRate;
 		}
-
-		fireCountdown -= Time.deltaTime;
-
+	    fireCountdown -= Time.deltaTime;
 	}
 
 	IEnumerator Shoot()
