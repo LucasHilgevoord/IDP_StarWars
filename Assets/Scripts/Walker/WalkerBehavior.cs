@@ -5,22 +5,30 @@ using UnityEngine;
 public class WalkerBehavior : MonoBehaviour
 {
 
-    [SerializeField] public GameObject target;
-    [SerializeField] public Transform body;
-    [SerializeField] public Transform head;
+    private GameObject target;
+    [SerializeField]
+    public Transform body;
+    [SerializeField]
+    public Transform head;
 
     private int range = 30;
     private int rotationSpeed = 10;
     private float fireRate = 3;
     private float fireCountdown = 0f;
 
-    [SerializeField] public GameObject bulletPrefab;
-    [SerializeField] public Transform firePointA;
-    [SerializeField] public Transform firePointB;
-    [SerializeField] public Transform firePointC;
-    [SerializeField] public Transform firePointD;
+    [SerializeField]
+    public GameObject bulletPrefab;
+    [SerializeField]
+    public Transform firePointA;
+    [SerializeField]
+    public Transform firePointB;
+    [SerializeField]
+    public Transform firePointC;
+    [SerializeField]
+    public Transform firePointD;
 
-    [SerializeField] public AudioClip shootSound;
+    [SerializeField]
+    public AudioClip shootSound;
     private AudioSource audioSource;
 
     void Start()
@@ -41,10 +49,7 @@ public class WalkerBehavior : MonoBehaviour
                 if (target.transform.position.y < transform.position.y)
                 {
                     //Als de player lager is dan y0 dan blijft de y0.
-                    var lookPos = target.transform.position - transform.position;
-                    lookPos.y = 0;
-                    var rotation = Quaternion.LookRotation(lookPos);
-                    head.rotation = Quaternion.Slerp(head.rotation, rotation, Time.deltaTime * rotationSpeed);
+                    head.rotation = Quaternion.Slerp(head.rotation, body.rotation, Time.deltaTime * rotationSpeed);
                 }
                 else
                 {
@@ -80,7 +85,7 @@ public class WalkerBehavior : MonoBehaviour
         yield return new WaitForSeconds(1f);
         Instantiate(bulletPrefab, firePointB.position, head.rotation);
         Instantiate(bulletPrefab, firePointD.position, head.rotation);
-        
+
     }
 
 
