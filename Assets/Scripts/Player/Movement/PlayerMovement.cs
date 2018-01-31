@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour 
 {
-	[SerializeField]float movementSpeed = 20f;
-	[SerializeField]float turnSpeed = 60f;
+	[SerializeField] float movementSpeed;
+	[SerializeField] float turnSpeed;
 
 	Transform objT;
 
@@ -18,6 +18,10 @@ public class PlayerMovement : MonoBehaviour
 	{
 		Turn();
 		Thrust();
+
+		Vector3 clampedPosition = objT.position;
+		clampedPosition.y = Mathf.Clamp (transform.position.y, -1f, 50f);
+		transform.position = clampedPosition;
 	}
 
 	void Turn()

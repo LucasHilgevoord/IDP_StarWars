@@ -36,11 +36,11 @@ public class PlayerShooting : MonoBehaviour
 
 	IEnumerator Shoot()
 	{
-		Instantiate(bullet, muzzle1.position, muzzle1.rotation);
-		Instantiate(bullet, muzzle3.position, muzzle3.rotation);
-		audioSource.PlayOneShot(shootSound, 0.5F);
 		muzzleFlashA.Play ();
 		muzzleFlashB.Play ();
+		audioSource.PlayOneShot(shootSound, 0.5F);
+		Instantiate(bullet, muzzle1.position, muzzle1.rotation);
+		Instantiate(bullet, muzzle3.position, muzzle3.rotation);
 		yield return new WaitForSeconds(0.5f);
 		Instantiate(bullet, muzzle2.position, muzzle2.rotation);
 		Instantiate(bullet, muzzle4.position, muzzle4.rotation);

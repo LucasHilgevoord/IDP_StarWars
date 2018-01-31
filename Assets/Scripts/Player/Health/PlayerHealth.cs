@@ -6,7 +6,7 @@ public class PlayerHealth : MonoBehaviour
 {
 	[SerializeField] private Stat health;
 	[SerializeField] private GameObject explosionPoint;
-	[SerializeField] public GameObject explosion;
+	[SerializeField] private GameObject explosion;
 
 	private void Awake ()
 	{
@@ -19,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
 		{
 			health.CurrentVal -= 50 * Time.deltaTime;
 		}
+
 		if(col.gameObject.tag != "EnemyBullet")
 		{
 			health.CurrentVal = 0;
