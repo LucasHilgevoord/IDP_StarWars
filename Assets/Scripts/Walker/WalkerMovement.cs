@@ -3,16 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class WalkerMovement : MonoBehaviour {
+public class WalkerMovement : MonoBehaviour
+{
 
     private NavMeshAgent NavM;
     private float PathResetTime = 3;
     private bool isWalking = false;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         NavM = GetComponent<NavMeshAgent>();
-       // GetRandomPos();
+        // GetRandomPos();
     }
 
     void Update()
@@ -22,12 +24,12 @@ public class WalkerMovement : MonoBehaviour {
 
     }
 
-    Vector3 GetRandomPos ()
+    Vector3 GetRandomPos()
     {
         //PathResetTime = Random.Range(3, 8);
         float x = Random.Range(-600, 600);
         float z = Random.Range(-600, 600);
-    
+
         Vector3 pos = new Vector3(x, 0, z);
         return pos;
     }

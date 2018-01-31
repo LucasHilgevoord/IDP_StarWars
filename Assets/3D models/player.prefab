@@ -129,11 +129,15 @@ GameObject:
   m_Component:
   - component: {fileID: 4198754191521710}
   - component: {fileID: 114643871392609930}
+<<<<<<< HEAD
+  - component: {fileID: 114392959630980026}
+=======
   - component: {fileID: 54105567357047502}
   - component: {fileID: 65365798290868576}
   - component: {fileID: 65524189402766504}
   - component: {fileID: 114611359458034760}
   - component: {fileID: 114559137699643040}
+>>>>>>> d0784c43d15af4e3640c6f147f400a4963e54c24
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -4945,7 +4949,11 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+<<<<<<< HEAD
+--- !u!114 &114392959630980026
+=======
 --- !u!114 &114559137699643040
+>>>>>>> d0784c43d15af4e3640c6f147f400a4963e54c24
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -4956,6 +4964,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f5207688810b8d498d3daa5e363e527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  maxHealth: 50
+  bulletDamage: 1
+=======
   health:
     bar: {fileID: 0}
     maxVal: 0
@@ -4976,6 +4988,7 @@ MonoBehaviour:
   muzzle2: {fileID: 4550365433262336}
   muzzle3: {fileID: 0}
   muzzle4: {fileID: 0}
+>>>>>>> d0784c43d15af4e3640c6f147f400a4963e54c24
 --- !u!114 &114643871392609930
 MonoBehaviour:
   m_ObjectHideFlags: 1

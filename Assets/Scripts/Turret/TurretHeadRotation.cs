@@ -5,21 +5,28 @@ using UnityEngine;
 public class TurretHeadRotation : MonoBehaviour
 {
 
-    [SerializeField] public GameObject target;
-    [SerializeField] public Transform body;
-    [SerializeField] public Transform head;
-    [SerializeField] public Transform gun;
+    private GameObject target;
+    [SerializeField]
+    public Transform body;
+    [SerializeField]
+    public Transform head;
+    [SerializeField]
+    public Transform gun;
 
     private int range = 20;
     private int rotationSpeed = 5;
     private float fireRate = 3;
     private float fireCountdown = 0f;
 
-    [SerializeField] public GameObject bulletPrefab;
-    [SerializeField] public Transform firePointA;
-    [SerializeField] public Transform firePointB;
+    [SerializeField]
+    public GameObject bulletPrefab;
+    [SerializeField]
+    public Transform firePointA;
+    [SerializeField]
+    public Transform firePointB;
 
-    [SerializeField] public AudioClip shootSound;
+    [SerializeField]
+    public AudioClip shootSound;
     private AudioSource audioSource;
 
     void Start()
@@ -36,7 +43,12 @@ public class TurretHeadRotation : MonoBehaviour
         //-=VERSIMPEL=-
         if (target != null)
         {
-            if (Vector3.Distance(transform.position, target.transform.position) < range)
+            if (target.transform.position.y < transform.position.y)
+            {
+                //Als de player lager is dan y0 dan blijft de y0.
+                head.rotation = Quaternion.Slerp(head.rotation, body.rotation, Time.deltaTime * rotationSpeed);
+            }
+            else
             {
                 //Head Rotation
                 var headLookPos = target.transform.position - transform.position;
@@ -58,22 +70,23 @@ public class TurretHeadRotation : MonoBehaviour
 
                 fireCountdown -= Time.deltaTime;
             }
-            else
-            {
-                //Als Player niet in range is dan blijft hij de body volgen.
-                head.rotation = Quaternion.Slerp(head.rotation, body.rotation, Time.deltaTime * rotationSpeed);
-            }
+        }
+        else
+        {
+            //Als Player niet in range is dan blijft hij de body volgen.
+            head.rotation = Quaternion.Slerp(head.rotation, body.rotation, Time.deltaTime * rotationSpeed);
         }
     }
 
     IEnumerator Shoot()
     {
+        yield return new WaitForSeconds(0.5f);
         Debug.Log("Turret Shoot!");
         Instantiate(bulletPrefab, firePointA.position, gun.rotation);
         audioSource.PlayOneShot(shootSound, 0.7F);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.5f);
         Instantiate(bulletPrefab, firePointB.position, gun.rotation);
-        
+
     }
 
     void OnDrawGizmosSelected()

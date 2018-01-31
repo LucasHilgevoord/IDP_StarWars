@@ -4,12 +4,20 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour 
 {
-	[SerializeField] private Stat health;
+    [SerializeField] private Stat health;
 
 	private void Awake ()
 	{
 		health.Initialize ();
 	}
+
+    void Update ()
+    {
+        if (health.CurrentVal <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 
 	void OnCollisionEnter (Collision col)
 	{
@@ -17,6 +25,11 @@ public class PlayerHealth : MonoBehaviour
 		{
 			health.CurrentVal -= 50 * Time.deltaTime;
 		}
-	}
+
+        if (col.gameObject.tag != "EnemyBullet")
+        {
+            health.CurrentVal = 0;
+        }
+    }
 }
 

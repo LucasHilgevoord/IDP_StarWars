@@ -4,8 +4,12 @@ using UnityEngine;
 
 public class WalkerHealth : MonoBehaviour {
 
-    [SerializeField] public int maxHealth = 50;
-    [SerializeField] public int bulletDamage = 1;
+    private int maxHealth = 1;
+    private int bulletDamage = 1;
+    [SerializeField]
+    private GameObject explosionPoint;
+    [SerializeField]
+    public GameObject explosion;
 
 
 
@@ -16,8 +20,10 @@ public class WalkerHealth : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Debug.Log(maxHealth);
 		if (maxHealth <= 0)
         {
+            Instantiate(explosion, explosionPoint.transform.position, Quaternion.identity);
             Destroy(gameObject);
         }
 	}
