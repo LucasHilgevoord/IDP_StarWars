@@ -4,14 +4,12 @@ using UnityEngine;
 
 public class WalkerHealth : MonoBehaviour {
 
-    private int maxHealth = 1;
-    private int bulletDamage = 1;
+    [SerializeField] public int maxHealth = 50;
+    [SerializeField] public int bulletDamage = 50;
     [SerializeField]
     private GameObject explosionPoint;
     [SerializeField]
     public GameObject explosion;
-
-
 
     // Use this for initialization
     void Start () {

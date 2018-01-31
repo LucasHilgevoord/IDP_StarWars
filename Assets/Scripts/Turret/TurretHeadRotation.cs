@@ -29,6 +29,9 @@ public class TurretHeadRotation : MonoBehaviour
     public AudioClip shootSound;
     private AudioSource audioSource;
 
+    public ParticleSystem muzzleFlashA;
+    public ParticleSystem muzzleFlashB;
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -80,12 +83,12 @@ public class TurretHeadRotation : MonoBehaviour
 
     IEnumerator Shoot()
     {
-        yield return new WaitForSeconds(0.5f);
-        Debug.Log("Turret Shoot!");
         Instantiate(bulletPrefab, firePointA.position, gun.rotation);
+        muzzleFlashA.Play();
         audioSource.PlayOneShot(shootSound, 0.7F);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         Instantiate(bulletPrefab, firePointB.position, gun.rotation);
+        muzzleFlashB.Play();
 
     }
 

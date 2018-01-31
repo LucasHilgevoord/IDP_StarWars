@@ -26,16 +26,14 @@ public class PlayerShooting : MonoBehaviour
 			StartCoroutine(Shoot());
 			fireCountdown = 1f / fireRate;
 		}
-
-		fireCountdown -= Time.deltaTime;
-
+	    fireCountdown -= Time.deltaTime;
 	}
 
 	IEnumerator Shoot()
 	{
 		Instantiate(bullet, muzzle1.position, muzzle1.rotation);
 		Instantiate(bullet, muzzle3.position, muzzle3.rotation);
-		yield return new WaitForSeconds(0.5f);
+		yield return new WaitForSeconds(1f);
 		Instantiate(bullet, muzzle2.position, muzzle2.rotation);
 		Instantiate(bullet, muzzle4.position, muzzle4.rotation);
 
