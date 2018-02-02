@@ -555,7 +555,7 @@ GameObject:
   - component: {fileID: 4231614629131484}
   - component: {fileID: 95020045510124900}
   m_Layer: 0
-  m_Name: final_anim_walk2
+  m_Name: Cathy_Walker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

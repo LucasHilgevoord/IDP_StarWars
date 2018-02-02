@@ -26,13 +26,12 @@ public class PlayerHealth : MonoBehaviour
 		}
 	}
 
-
 	void Update ()
 	{
 		if (health.CurrentVal <= 0) 
 		{
 			Instantiate (explosion, explosionPoint.transform.position, Quaternion.identity);
-			Destroy (gameObject);
+			gameObject.SetActive(false);
 		}
 	}
 }

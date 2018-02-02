@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
 		Thrust();
 
 		Vector3 clampedPosition = objT.position;
-		clampedPosition.y = Mathf.Clamp (transform.position.y, -1f, 50f);
+		clampedPosition.y = Mathf.Clamp (transform.position.y, -1f, 30f);
 		transform.position = clampedPosition;
 	}
 
