@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Healthbar : MonoBehaviour {
 
-    private float fillAmount;
+	private float fillAmount;
 	[SerializeField] private float lerpSpeed;
 	[SerializeField] private Image content;
 	[SerializeField] private Text valueText;
@@ -26,7 +26,7 @@ public class Healthbar : MonoBehaviour {
 	{
 		Value = 100;
 	}
-	
+
 	void Update () 
 	{
 		HandleBar ();

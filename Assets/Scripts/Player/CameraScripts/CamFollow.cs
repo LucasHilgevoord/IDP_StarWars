@@ -8,6 +8,7 @@ public class CamFollow : MonoBehaviour
 	[SerializeField] Vector3 defDistance = new Vector3 (0f, 2f, 10f);
 	[SerializeField] float targetDistance = 15f;
 	[SerializeField] float targetRotation = 15f;
+
 	Transform objT;
 
 	void Awake()
@@ -25,5 +26,4 @@ public class CamFollow : MonoBehaviour
 		Quaternion curRot = Quaternion.Slerp (objT.rotation, toRot, targetRotation * Time.deltaTime);
 		objT.rotation = curRot;
 	}
-
 }

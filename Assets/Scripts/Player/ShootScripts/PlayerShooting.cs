@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-	
+
 	[SerializeField] ParticleSystem muzzleFlashA;
 	[SerializeField] ParticleSystem muzzleFlashB;
 	[SerializeField] GameObject bullet;
@@ -12,10 +12,9 @@ public class PlayerShooting : MonoBehaviour
 	[SerializeField] Transform muzzle2;
 	[SerializeField] Transform muzzle3;
 	[SerializeField] Transform muzzle4;
-	[SerializeField]
-	public AudioClip shootSound;
-	private AudioSource audioSource;
+	[SerializeField] AudioClip shootSound;
 
+	private AudioSource audioSource;
 	private float fireRate = 1;
 	private float fireCountdown = 0f;
 
@@ -31,7 +30,7 @@ public class PlayerShooting : MonoBehaviour
 			StartCoroutine(Shoot());
 			fireCountdown = 1f / fireRate;
 		}
-	    fireCountdown -= Time.deltaTime;
+		fireCountdown -= Time.deltaTime;
 	}
 
 	IEnumerator Shoot()
@@ -45,5 +44,5 @@ public class PlayerShooting : MonoBehaviour
 		Instantiate(bullet, muzzle2.position, muzzle2.rotation);
 		Instantiate(bullet, muzzle4.position, muzzle4.rotation);
 		audioSource.PlayOneShot(shootSound, 0.7F);
-    }
+	}
 }
