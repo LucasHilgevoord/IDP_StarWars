@@ -13,9 +13,9 @@ public class TurretHeadRotation : MonoBehaviour
     [SerializeField]
     public Transform gun;
 
-    private int range = 20;
+    private int range = 1;
     private int rotationSpeed = 5;
-    private float fireRate = 3;
+    private float fireRate = 1;
     private float fireCountdown = 0f;
 
     [SerializeField]

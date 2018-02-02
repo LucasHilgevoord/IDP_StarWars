@@ -26,16 +26,21 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if(col.gameObject.tag == "EnemyBullet")
 		{
-			health.CurrentVal -= 50 * Time.deltaTime;
+			health.CurrentVal -= 10 * Time.deltaTime;
 		}
 
 		if(col.gameObject.tag != "EnemyBullet")
 		{
-			health.CurrentVal = 0;
+			health.CurrentVal = 0 * Time.deltaTime;
+		}
+
+		if(health.CurrentVal == 0) 
+		{
 			audioSource.PlayOneShot(explosionSound, 1f);
 			Instantiate (explosion, explosionPoint.transform.position, Quaternion.identity);
 			StartCoroutine(Reset ());
 		}
+
 	}
 
 	IEnumerator Reset()

@@ -6,14 +6,14 @@ public class CamFollow : MonoBehaviour
 {
 	[SerializeField] Transform target;
 	[SerializeField] Vector3 defDistance = new Vector3 (0f, 2f, 10f);
-	[SerializeField] float targetDistance = 15f;
-	[SerializeField] float targetRotation = 15f;
+	[SerializeField] float targetDistance;
+	[SerializeField] float targetRotation;
 
 	Transform objT;
 
 	void Awake()
 	{
- 	 objT = transform;
+		objT = transform;
 	}
 
 	void LateUpdate()
